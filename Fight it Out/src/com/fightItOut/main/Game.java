@@ -20,22 +20,20 @@ public class Game extends Canvas implements Runnable {
 
 	private Thread thread;
 	private boolean running = false;
-	
+
 	private Random r;
 	private Handler handler;
 
 	public Game() {
 		handler = new Handler();
-		
+		this.addKeyListener(new KeyInput(handler));
+
 		new Window(WIDTH, HEIGHT, "Fight it out!", this);
-	
+
 		r = new Random();
-		
-		for(int i=0;i<50;i++){
-			handler.addObject(new Player(r.nextInt(WIDTH), r.nextInt(HEIGHT),
-					ID.Player));
-		}
-		
+
+		handler.addObject(new Player(WIDTH / 2 - 32, HEIGHT / 2 - 32, ID.Player));
+
 	}
 
 	public synchronized void start() {
@@ -96,9 +94,9 @@ public class Game extends Canvas implements Runnable {
 
 		g.setColor(Color.black);
 		g.fillRect(0, 0, WIDTH, HEIGHT);
-		
+
 		handler.render(g);
-		
+
 		g.dispose();
 		bs.show();
 	}
