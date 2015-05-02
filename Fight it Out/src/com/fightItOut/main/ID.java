@@ -8,8 +8,7 @@ package com.fightItOut.main;
  * @since May 2, 2015
  */
 public enum ID {
-	
-	Player(),
-	Enemy();
-	
+
+	Player(), Enemy();
+
 }

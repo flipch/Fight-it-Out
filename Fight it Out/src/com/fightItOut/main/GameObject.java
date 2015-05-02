@@ -15,11 +15,13 @@ public abstract class GameObject {
 	protected ID id;
 	protected int velX, velY;
 
-	
 	/**
-	 * @param x the position on screen X-wise
-	 * @param y the position on screen Y-wise
-	 * @param id the ID 
+	 * @param x
+	 *            the position on screen X-wise
+	 * @param y
+	 *            the position on screen Y-wise
+	 * @param id
+	 *            the ID
 	 */
 	public GameObject(int x, int y, ID id) {
 		this.x = x;
@@ -31,7 +33,9 @@ public abstract class GameObject {
 
 	/**
 	 * The rendering properties of the GameObject
-	 * @param g the graphics instance
+	 * 
+	 * @param g
+	 *            the graphics instance
 	 */
 	public abstract void render(Graphics g);
 
