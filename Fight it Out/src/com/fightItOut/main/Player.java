@@ -8,6 +8,7 @@ import java.awt.Graphics;
 import java.util.Random;
 
 /**
+ * Object Player Class with all it's properties
  * @author Felipe Heliszkowski
  * @version 1.0.0
  * @since May 2, 2015
@@ -26,6 +27,8 @@ public class Player extends GameObject {
 	public void tick() {
 		x += velX;
 		y += velY;
+		
+		x = Game.clamp(x, 0, Game.WIDTH - 36);
 	}
 
 	@Override
@@ -33,5 +36,7 @@ public class Player extends GameObject {
 		g.setColor(Color.white);
 		g.fillRect(x, y, 32, 32);
 	}
+	
+	
 
 }

@@ -3,9 +3,7 @@ package com.fightItOut.main;
 import java.awt.Graphics;
 
 /**
- * Joins all Object types into this abstract one( GameObject) So enemyObject
- * becomes the same as playerObject
- * 
+ * Joins all Object types into an abstract one(GameObject) 
  * @author Felipe Heliszkowski
  * @since May 2, 2015
  */

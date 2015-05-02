@@ -4,10 +4,10 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 /**
+ * Handles Key Inputs and Events
  * @author Felipe
  * @version 1.0.0
  * @since May 2, 2015
- *
  */
 public class KeyInput extends KeyAdapter {
 
