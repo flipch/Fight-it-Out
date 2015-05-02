@@ -3,32 +3,46 @@
  */
 package com.fightItOut.main;
 
+import java.awt.Color;
 import java.awt.Graphics;
+import java.util.Random;
 
 /**
- * @author Felipe
+ * Object Enemy Ranged Class with all it's properties
+ * 
+ * @author Felipe Heliszkowski
  * @version 1.0.0
  * @since May 2, 2015
  *
  */
 public class Enemy_Ranged extends GameObject {
 
-	/* (non-Javadoc)
-	 * @see com.fightItOut.main.GameObject#tick()
-	 */
+	Random r = new Random();
+
+	public Enemy_Ranged(int x, int y, ID id) {
+		super(x, y, id);
+
+		velX = 2;
+		velY = 2;
+
+	}
+
 	@Override
 	public void tick() {
-		// TODO Auto-generated method stub
+		x += velX;
+		y += velY;
+
+		if (y <= 0 || y >= Game.HEIGHT - 36)
+			velY *= -1;
+		if (x <= 0 || x >= Game.WIDTH - 16)
+			velX *= -1;
 
 	}
 
-	/* (non-Javadoc)
-	 * @see com.fightItOut.main.GameObject#render(java.awt.Graphics)
-	 */
 	@Override
 	public void render(Graphics g) {
-		// TODO Auto-generated method stub
+		g.setColor(Color.red);
+		g.fillRect(x, y, 16, 16);
 
 	}
-
 }
