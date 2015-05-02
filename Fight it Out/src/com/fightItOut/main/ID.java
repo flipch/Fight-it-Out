@@ -9,6 +9,6 @@ package com.fightItOut.main;
  */
 public enum ID {
 
-	Player(), Enemy();
+	Player(), Enemy_Ranged(), Enemy_Melee(), Relic_Health;
 
 }
