@@ -6,14 +6,14 @@ import java.awt.Dimension;
 import javax.swing.JFrame;
 
 /**
- * @author Felipe
- *
+ * @author Felipe Heliszkowski
+ * @since May 2, 2015
  */
 public class Window extends Canvas {
 
 	private static final long serialVersionUID = 8628287119017276521L;
 
-	public Window(int width, int height, String title,Game game) {
+	public Window(int width, int height, String title, Game game) {
 		JFrame frame = new JFrame(title);
 
 		frame.setPreferredSize(new Dimension(width, height));
