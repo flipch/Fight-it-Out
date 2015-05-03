@@ -7,6 +7,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 /**
+ * Heads up display class
  * @author Felipe
  * @version 1.0.0
  * @since May 3, 2015
@@ -17,7 +18,6 @@ public class HUD {
 	public static int PLAYER_HEALTH = 100;
 
 	public void tick() {
-		PLAYER_HEALTH--;
 		PLAYER_HEALTH = Game.clamp(PLAYER_HEALTH, 0, 100);
 	}
 

@@ -6,6 +6,7 @@ import java.awt.Dimension;
 import javax.swing.JFrame;
 
 /**
+ * Window GUI Setup
  * @author Felipe Heliszkowski
  * @since May 2, 2015
  */
