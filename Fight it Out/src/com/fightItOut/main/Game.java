@@ -15,7 +15,7 @@ import java.util.Random;
  * @since May 2, 2015
  */
 public class Game extends Canvas implements Runnable {
-
+//OLA
 	private static final long serialVersionUID = -1539400485938755709L;
 
 	public static final int WIDTH = 1280, HEIGHT = WIDTH / 12 * 9;
