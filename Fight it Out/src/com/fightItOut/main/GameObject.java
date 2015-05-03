@@ -1,6 +1,7 @@
 package com.fightItOut.main;
 
 import java.awt.Graphics;
+import java.awt.Rectangle;
 
 /**
  * Joins all Object types into an abstract one(GameObject) 
@@ -8,7 +9,8 @@ import java.awt.Graphics;
  * @since May 2, 2015
  */
 public abstract class GameObject {
-
+	
+	protected int health;
 	protected int x, y;
 	protected ID id;
 	protected int velX, velY;
@@ -25,9 +27,31 @@ public abstract class GameObject {
 		this.x = x;
 		this.y = y;
 		this.id = id;
+		this.health = 100;
+	}
+
+	/**
+	 * @return the health
+	 */
+	public int getHealth() {
+		return health;
+	}
+
+	/**
+	 * @param health the health to set
+	 */
+	public void setHealth(int health) {
+		this.health = health;
 	}
 
 	public abstract void tick();
+	
+	/**
+	 * Rectangle bound collision check
+	 * @return bounds of Game Object
+	 */
+	
+	public abstract Rectangle getBounds();
 
 	/**
 	 * The rendering properties of the GameObject

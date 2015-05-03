@@ -29,7 +29,10 @@ public enum ID {
 	 * Health Relic ID
 	 */
 	
-	Relic_Health;
-
+	Relic_Health,
+	/**
+	 * Trail gfx ID
+	 */
+	Trail();
 
 }
