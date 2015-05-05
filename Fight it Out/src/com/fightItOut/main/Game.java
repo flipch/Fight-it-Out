@@ -15,7 +15,7 @@ import java.util.Random;
  * @since May 2, 2015
  */
 public class Game extends Canvas implements Runnable {
-//OLA
+
 	private static final long serialVersionUID = -1539400485938755709L;
 
 	public static final int WIDTH = 1280, HEIGHT = WIDTH / 12 * 9;
@@ -26,6 +26,7 @@ public class Game extends Canvas implements Runnable {
 	private Random r;
 	private Handler handler;
 	private HUD hud;
+	private Spawn spawner;
 	
 	public Game() {
 		handler = new Handler();
@@ -34,6 +35,7 @@ public class Game extends Canvas implements Runnable {
 		new Window(WIDTH, HEIGHT, "Fight it out!", this);
 
 		hud = new HUD();
+		spawner = new Spawn(handler, hud);
 		
 		r = new Random();
 
@@ -89,6 +91,7 @@ public class Game extends Canvas implements Runnable {
 	private void tick() {
 		handler.tick();
 		hud.tick();
+		spawner.tick();
 	}
 
 	private void render() {
